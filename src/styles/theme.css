@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/lato-light-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  color-scheme: dark;
+  --background: #000;
+  --foreground: #fff;
+  --primary: #fff;
+  --primary-foreground: #000;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
+  --border: #333;
+  --ring: #fff;
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}

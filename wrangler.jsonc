@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "young-in-landing",
+  "compatibility_date": "2026-11-04",
+  "assets": { "directory": "./dist" },
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "qus0in.dev", "custom_domain": true },
+    { "pattern": "www.qus0in.dev", "custom_domain": true }
+  ]
+}
