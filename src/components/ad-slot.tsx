@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { ads } from "@/ads-config";
 import { useAdSize } from "@/hooks/use-ad-size";
 import { AdUnit } from "./ad-unit";
+import { QuoteBanner } from "./quote-banner";
 
 export function AdSlot({ name }: { name: keyof typeof ads.slots }) {
   const size = useAdSize();
@@ -17,7 +18,7 @@ export function AdSlot({ name }: { name: keyof typeof ads.slots }) {
     <aside className="ad-slot" style={style} aria-label="광고" role="complementary">
       <span className="ad-label">광고</span>
       {live ? <AdUnit key={size} unit={unit} /> :
-        <div className="ad-placeholder">광고 자리 · {unit.w}×{unit.h}</div>}
+        <QuoteBanner />}
     </aside>
   );
 }
