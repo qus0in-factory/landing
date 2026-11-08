@@ -1,23 +1,20 @@
-# Delivery state
+# Delivery
 
-Implemented Vite + React + TypeScript with Tailwind and shadcn-style Button,
-Radix Slot, cva, cn utility, theme tokens, aliases, and components.json.
-Lato Light Italic is bundled under SIL OFL with matching Y icons and OG image.
-Echo, GitHub, and X link to the requested URLs.
+The default branch is `main`. Changes land on a short-lived branch, merge into
+`dev`, and are promoted to `main` through a pull request.
 
-Verified: TypeScript, production build, Wrangler deployment dry run (16 assets).
-Dependencies and lockfile are installed locally with pnpm.
-Run `pnpm install` then `pnpm deploy` with Cloudflare authentication.
+1. Branch from `dev`, commit, and run `pnpm build`.
+2. Merge into local `dev` and push with `git push origin dev`.
+3. Open a `dev` → `main` pull request and merge after checks pass.
+4. From a clean `main`, run `pnpm deploy` (`pnpm build && wrangler deploy`).
+5. Verify the live URLs, then return the checkout to `dev`.
 
-Cloudflare account authentication and the active qus0in.dev zone are verified.
-Both requested custom domains are configured in wrangler.jsonc.
+`pnpm install` is required once. Deployment needs Cloudflare authentication
+and the active `qus0in.dev` zone. Docs-only changes need no deploy.
 
-Deployed 2026-11-04 to https://qus0in.dev/ and https://www.qus0in.dev/.
-Worker: young-in-landing; version bc8db166-b79d-475b-b863-e2e5c2a33b06.
-Production build passed after normal dependency installation.
-HTTPS 200 verified for apex, OG, favicon, and www via public DNS address.
-Public DNS resolves both hostnames; local www DNS cache may lag briefly.
+Settings:
+- Ads: `src/ads-config.ts` (enabled, placeholder, provider, slots).
+- Quotes: `src/quote-banner.json` (text, source, interval, link).
+- GA4: `src/analytics-config.ts`.
 
-Review: same GPT family; favicon fallback corrected and assets rebuilt after
-review. Cross-family review and browser verification were unavailable/not run.
-All handwritten src modules satisfy 128 lines and 1024 characters.
+Fonts are self-hosted; do not add a font CDN. See `docs/licenses.md`.
