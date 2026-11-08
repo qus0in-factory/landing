@@ -1,0 +1,8 @@
+.quote-banner {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.quote-banner[data-ready="true"] { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .quote-banner { transition: none; }
+}
