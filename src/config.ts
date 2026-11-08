@@ -1,4 +1,6 @@
 export const site = {
+  name: "Young-in",
+  url: "https://qus0in.dev/",
   greeting: "Hello I'm Young-in",
   echo: "https://echo.qus0in.dev/",
   socials: [
