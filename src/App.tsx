@@ -4,6 +4,7 @@ import { Intro } from "@/components/intro";
 import { EchoLink } from "@/components/echo-link";
 import { SocialLinks } from "@/components/social-links";
 import { Button } from "@/components/ui/button";
+import { AdSlot } from "@/components/ad-slot";
 
 export default function App() {
   const [paused, setPaused] = useState(false);
@@ -13,6 +14,8 @@ export default function App() {
         <Intro paused={paused} />
         <EchoLink />
       </section>
+      <AdSlot name="heroBottom" />
+      <AdSlot name="footerAbove" />
       <footer>
         <SocialLinks />
         <Button variant="ghost" size="icon" onClick={() => setPaused(!paused)}
