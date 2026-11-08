@@ -1,0 +1,26 @@
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 360px));
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-card {
+  display: block;
+  overflow: hidden;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: white;
+  text-decoration: none;
+}
+.site-card img { width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; }
+.site-card:hover { border-color: #555; }
+.site-card:hover img { transform: scale(1.02); }
+.site-card:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+.site-details { padding: 14px; }
+.site-details h2 { margin: 0; font-size: 15px; }
+.site-details p { margin: 6px 0 0; font-size: 13px; color: var(--muted-foreground); }

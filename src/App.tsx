@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Pause, Play } from "lucide-react";
 import { Intro } from "@/components/intro";
-import { EchoLink } from "@/components/echo-link";
+import { SiteGrid } from "@/components/site-grid";
+import { sites } from "@/sites-config";
 import { SocialLinks } from "@/components/social-links";
 import { Button } from "@/components/ui/button";
 import { AdSlot } from "@/components/ad-slot";
@@ -12,7 +13,7 @@ export default function App() {
     <main>
       <section className="intro" aria-label="Introduction">
         <Intro paused={paused} />
-        <EchoLink />
+        <SiteGrid sites={sites} />
       </section>
       <AdSlot name="heroBottom" />
       <AdSlot name="footerAbove" />

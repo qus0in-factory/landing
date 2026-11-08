@@ -21,6 +21,4 @@ footer {
   align-items: center;
   gap: 18px;
 }
-.echo-link { font-size: 13px; letter-spacing: .025em; }
-.echo-dot { width: 5px; height: 5px; border-radius: 50%; background: white; margin-right: 8px; }
 ::selection { background: #fff; color: #000; }

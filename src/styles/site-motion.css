@@ -1,0 +1,7 @@
+.site-card, .site-card img { transition: border-color 200ms, transform 200ms; }
+.site-details ul { display: flex; gap: 8px; padding: 0; list-style: none; font-size: 12px; }
+@media (prefers-reduced-motion: reduce) {
+  .site-card, .site-card img { transition: none; }
+  .site-card:hover img { transform: none; }
+}
+.intro:has(.site-grid) { width: 100%; padding-inline: 16px; }
